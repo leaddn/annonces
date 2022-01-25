@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+        {% block title %}Welcome!{% endblock %}
+        </title>
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@1.3.3/dist/css/axentix.min.css">
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+
+        {% block stylesheets %}
+            <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">-->
+            
+            {#{{ encore_entry_link_tags('app') }}#}
+        {% endblock %}
+        
+
+
+    </head>
+
+    <body class="layout with-sidenav">
+        <header>
+            <nav class="navbar shadow-1 primary">
+                <a href="{{path('app_home')}}" class="navbar-brand">Axentix</a>
+                <div class="navbar-menu ml-auto">
+                    <a class="navbar-link" href="#">Accueil</a>
+                    <a class="navbar-link" href="#">Link 2</a>
+                    <a class="navbar-link" href="#">Link 3</a>
+                    <a class="navbar-link" href="#">Link 4</a>
+                </div>
+            </nav>
+        </header>
+
+        
+        <div id="example-sidenav" data-ax="sidenav" class="sidenav shadow-1 large fixed white">
+            <div class="sidenav-header">
+                <button data-target="example-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <!--<img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />-->
+            </div>
+            <a href="#" class="sidenav-link active">Mon profil</a>
+            <a href="#" class="sidenav-link">Mes annonces</a>
+        </div>
+        
+        <main>
+            
+            <button data-target="example-sidenav" class="btn rounded-1 press amaranth dark-1 sidenav-trigger hide-md-up">
+                Open sidenav
+            </button>
+            
+            {% block body %}{% endblock %}
+        </main>
+
+        <footer class="footer primary">
+            Copyright © 2021 - Example
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/axentix@1.3.3/dist/js/axentix.min.js"></script>
+        <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>-->
+
+        {% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+        {% endblock %}
+        <script>
+
+        </script>
+        <script src="{{ asset('js/scripts.js') }}"></script>
+    </body>
+</html>
