@@ -23,12 +23,11 @@
     <body class="layout with-sidenav">
         <header>
             <nav class="navbar shadow-1 primary">
-                <a href="{{path('app_home')}}" class="navbar-brand">Axentix</a>
+                <a href="{{path('app_home')}}" class="navbar-brand">Right Corner</a>
                 <div class="navbar-menu ml-auto">
-                    <a class="navbar-link" href="#">Accueil</a>
-                    <a class="navbar-link" href="#">Link 2</a>
-                    <a class="navbar-link" href="#">Link 3</a>
-                    <a class="navbar-link" href="#">Link 4</a>
+                    <a class="navbar-link" href="{{path('app_home')}}">Accueil</a>
+                    <a class="navbar-link" href="{{path('users')}}">Profil</a>
+                    <a class="navbar-link" href="{{path('contact')}}">Contact</a>
                 </div>
             </nav>
         </header>
@@ -39,8 +38,10 @@
                 <button data-target="example-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
                 <!--<img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />-->
             </div>
-            <a href="#" class="sidenav-link active">Mon profil</a>
-            <a href="#" class="sidenav-link">Mes annonces</a>
+            <a href="{{path('users')}}" class="sidenav-link active">Modifier mon profil</a>
+            <a href="{{path('admin_annonces_home')}}" class="sidenav-link">Gérer Mes annonces</a>
+            <a href="{{path('users_annonces_ajout')}}" class="sidenav-link">Ajouter une annonce</a>
+                        <a href="{{path('admin_categories_home')}}" class="sidenav-link">Modifier mes catégories</a>
         </div>
         
         <main>

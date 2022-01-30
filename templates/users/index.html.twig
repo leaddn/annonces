@@ -30,7 +30,8 @@
         </div>
         {% for annonce in app.user.annonces %}
             <div class="col-xs1">Titre :</div>
-            <div class="col-xs3">{{annonce.title}}</div>
+            <div class="col-xs3">{{annonce.title}}<br><a class="btn shadow-1 rounded-1 blue" href="{{path('users_annonces_edit', {'id': annonce.id})}}">Modifier</a></div>
+
         {% endfor %}
 
     </div>

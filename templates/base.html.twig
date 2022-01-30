@@ -19,15 +19,14 @@
 
     <body class="layout">
         <header>
-        <nav class="navbar shadow-1 primary">
-            <a href="{{path('app_home')}}" class="navbar-brand">Axentix</a>
-            <div class="navbar-menu ml-auto">
-            <a class="navbar-link" href="#">Accueil</a>
-            <a class="navbar-link" href="#">Link 2</a>
-            <a class="navbar-link" href="#">Link 3</a>
-            <a class="navbar-link" href="#">Link 4</a>
-            </div>
-        </nav>
+            <nav class="navbar shadow-1 primary">
+                <a href="{{path('app_home')}}" class="navbar-brand">Right Corner</a>
+                <div class="navbar-menu ml-auto">
+                <a class="navbar-link" href="{{path('app_home')}}">Accueil</a>
+                <a class="navbar-link" href="{{path('users')}}">Profil</a>
+                <a class="navbar-link" href="{{path('contact')}}">Contact</a>
+                </div>
+            </nav>
         </header>
 
         <main>

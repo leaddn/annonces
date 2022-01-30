@@ -6,7 +6,7 @@
 <div class="container">
     {{ form(form) }}
     {% for annonce in annonces %}
-        <div class="card shadow-1 fx-row">
+        <div class="card shadow-1 fx-row card-hover">
             <div class="primary d-flex vcenter fx-center px-4">
                 <img src="{{ asset('/uploads/' ~ annonce.images[0].name)|imagine_filter('square') }}" alt="{{annonce.title}}">
             </div>
